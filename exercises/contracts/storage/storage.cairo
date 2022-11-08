@@ -3,7 +3,7 @@
 %lang starknet
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
-from cairo_contracts.src.openzeppelin.access.ownable.library import Ownable
+from openzeppelin.access.ownable.library import Ownable
 from starkware.starknet.common.syscalls import get_caller_address
 
 @constructor
