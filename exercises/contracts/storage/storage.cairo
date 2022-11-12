@@ -3,12 +3,11 @@
 %lang starknet
 
 from starkware.cairo.common.cairo_builtins import HashBuiltin
-from openzeppelin.access.ownable.library import Ownable
+from openzeppelin.access.ownable import Ownable
 from starkware.starknet.common.syscalls import get_caller_address
 
 @constructor
-func constructor{syscall_ptr:felt*, pedersen_ptr:HashBuiltin*, range_check_ptr}(){
-    let (owner) = get_caller_address();
+func constructor{syscall_ptr:felt*, pedersen_ptr:HashBuiltin*, range_check_ptr}(owner:felt){
     Ownable.initializer(owner);
     return ();
 }

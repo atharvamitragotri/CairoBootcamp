@@ -1,5 +1,5 @@
 ["protostar.config"]
-protostar_version = "0.6.0"
+protostar_version = "0.7.0"
 
 ["protostar.project"]
 libs_path = "."
@@ -9,5 +9,5 @@ Storage=[
     "./exercises/contracts/storage/storage.cairo",
 ]
 Ownable=[
-    "./cairo_contracts/src/openzeppelin/access/ownable/library.cairo",
+    "./openzeppelin/access/ownable.cairo",
 ]
