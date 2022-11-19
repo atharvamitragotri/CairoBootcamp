@@ -11,3 +11,6 @@ Storage=[
 Ownable=[
     "./openzeppelin/access/ownable.cairo",
 ]
+Consortium=[
+    "./exercises/contracts/consortium/consortium.cairo",
+]
