@@ -2,6 +2,7 @@
 from starkware.cairo.common.uint256 import Uint256, uint256_sub
 @contract_interface
 namespace IErc20 {
+    
     func balanceOf(account: felt) -> (res: Uint256) {
     }
 
@@ -25,4 +26,14 @@ namespace IErc20 {
 
     func get_admin() -> (admin_address: felt) {
     }
+
+    func approve(spender: felt, amount: Uint256) -> () {
+    }
+
+    func allowance(owner: felt, spender: felt) -> (remaining: Uint256) {
+    }
+
+    func transferFrom(sender: felt, recipient: felt, amount: Uint256) -> () {
+    }
+
 }

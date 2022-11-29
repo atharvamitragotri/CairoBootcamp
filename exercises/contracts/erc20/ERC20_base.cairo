@@ -44,11 +44,11 @@ func ERC20_allowances(owner: felt, spender: felt) -> (allowance: Uint256) {
 //
 
 func ERC20_initializer{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_check_ptr}(
-    name: felt, symbol: felt, initial_supply: Uint256, recipient: felt
+    name: felt, symbol: felt, decimals: felt, initial_supply: Uint256, recipient: felt
 ) {
     ERC20_name_.write(name);
     ERC20_symbol_.write(symbol);
-    ERC20_decimals_.write(18);
+    ERC20_decimals_.write(decimals);
     ERC20_mint(recipient, initial_supply);
     return ();
 }
